@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>添加客户任务</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../assets/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"></link>
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/work.css" rel="stylesheet"></link>
+
+
+</head>
+<body>
+
+<h2 class="sub-header">添加客户</h2>
+
+<form action="#" th:action="@{/customer}" th:object="${content}" method="post">
+    <div class="form-group">
+        <label>bizid</label>
+        <input type="text" class="form-control" th:field="*{bizid}" placeholder="bizid"></input>
+    </div>
+    <div class="form-group">
+        <label>appid</label>
+        <input type="text" class="form-control" th:field="*{appid}" placeholder="appid"></input>
+    </div>
+    <div class="form-group">
+        <label>uin</label>
+        <input type="text" class="form-control" th:field="*{uin}" placeholder="uin"></input>
+    </div>
+    <div class="form-group">
+        <label>name</label>
+        <input type="text" class="form-control" th:field="*{name}" placeholder="name"></input>
+    </div>
+    <button type="submit" class="btn btn-default">添加</button>
+</form>
+
+</body>
+</html>
